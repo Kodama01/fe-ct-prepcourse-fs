@@ -69,9 +69,7 @@ function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
-   let sumArray = arrayOfNums.reduce((acc,item)=>{
-      return acc = acc + item;
-   });
+   let sumArray = arrayOfNums.reduce((acc,currVal) => acc + currVal);
    return sumArray;
 }
 
@@ -79,12 +77,17 @@ function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
+   let sumArray = resultadosTest.reduce((acc,currVal)=>acc + currVal);
+   let promArray = sumArray / resultadosTest.length;
+   return promArray;
 }
 
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
+   let maxNum = Math.max(...arrayOfNums);
+   return maxNum;
 }
 
 function multiplicarArgumentos() {
