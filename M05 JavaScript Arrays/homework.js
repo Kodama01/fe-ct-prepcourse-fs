@@ -9,7 +9,7 @@ function devolverPrimerElemento(array) {
 function devolverUltimoElemento(array) {
    // Retornar el último elemento del arreglo recibido por parámetro.
    // Tu código:
-   return array[array.length -1];
+   return array[array.length -1]; // tambien se puede utilizar array.pop()
 }
 
 function obtenerLargoDelArray(array) {
@@ -58,11 +58,7 @@ function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
    // Tu código:
-   if (array.includes(elemento)){
-      return true;
-   }else{
-      return false;
-   }
+   return array.includes(elemento);
 }
 
 function agregarNumeros(arrayOfNums) {
@@ -99,10 +95,12 @@ function multiplicarArgumentos() {
       return(0);
    }   else if (arguments.length === 1){  
       return(arguments[0]);
-   }  else if (arguments.length >= 2){
-      let mult = arguments.reduce((acc,currVal) => acc * currVal);
-      return(mult);
    }
+   let prod = arguments[0];
+   for( let i = 1 ; i < arguments.length ; i++){
+      prod *= arguments[i];
+   }
+   return prod;
 }
 
 function cuentoElementos(array) {
@@ -132,7 +130,7 @@ function empiezaConNueve(num) {
    if ( numToString[0] === '9'){
       return true;
    }else {
-      return false;
+      return false; 
    }
 }
 
