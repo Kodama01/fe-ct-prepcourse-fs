@@ -154,12 +154,17 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
-      if(array.includes('Enero','Marzo','Noviembre')){
-         let mesesX = ['Enero','Marzo','Noviembre'];
-         return mesesX;
-      }else{
-         return('No se encontraron los meses pedidos');
+   let mesesFind = [];
+   for(i = 0 ; i < array.length ; i++){
+      if(array[i] === 'Enero' || array[i] === 'Marzo' || array[i] === 'Noviembre'){
+         mesesFind.push(array[i]);
       }
+   }
+   if (mesesFind.length === 3){
+      return(mesesFind);
+   }else{
+      return('No se encontraron los meses pedidos')
+   }
 }
 
 function tablaDelSeis() {
@@ -192,6 +197,21 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   const resultArr = [];
+   let iterations = 0;
+ 
+   while (iterations < 10) {
+     num += 2;
+     resultArr.push(num);
+     iterations++;
+     
+     if (num === iterations) {
+       console.log("Se interrumpió la ejecución");
+       break;
+     }
+   }
+ 
+   return resultArr;
 }
 
 function continueStatement(num) {
