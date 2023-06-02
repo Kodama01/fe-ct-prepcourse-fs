@@ -65,7 +65,8 @@ function filter(arrayOfStrings) {
    // Tu código:
    let newArr = [];
    for (let i = 0; i < arrayOfStrings.length; i++) {
-      if(arrayOfStrings[i].startsWith('a')){
+      let letters = arrayOfStrings[i].split('');         // Can be done with the string prototype .startsWith too.
+      if(letters[0] === 'a'){
          newArr.push(arrayOfStrings[i]);
       }
    }
